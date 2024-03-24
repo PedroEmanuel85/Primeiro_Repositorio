@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double nota;
+
+        while (true) {
+            System.out.println("Digite uma nota entre zero e dez: ");
+            nota = sc.nextDouble();
+
+            if (nota >= 0 && nota <= 10) {
+                break; // Sai do loop se a nota for válida
+            } else {
+                System.out.println("Valor inválido! A nota deve ser entre zero e dez.");
+            }
+        }
+
+        System.out.println("Nota válida: " + nota);
+
+        sc.close();
+    }
+}
